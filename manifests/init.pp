@@ -3,9 +3,11 @@
 # Examples
 #
 #   include libreoffice
-class libreoffice {
+class libreoffice (
+    $version = "4.2.1"
+  ) {
   package { 'LibreOffice':
     provider => 'appdmg',
-    source   => 'http://download.documentfoundation.org/libreoffice/stable/4.1.4/mac/x86/LibreOffice_4.1.4_MacOS_x86.dmg'
+    source   => "http://download.documentfoundation.org/libreoffice/stable/${version}/mac/x86/LibreOffice_${version}_MacOS_x86.dmg"
   }
 }

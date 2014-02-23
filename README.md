@@ -1,18 +1,21 @@
 # Libreoffice Puppet Module for Boxen
 
-[![Build Status](https://travis-ci.org/boxen/puppet-libreoffice.png?branch=master)](https://travis-ci.org/boxen/puppet-libreoffice)
-
 ## Usage
 
 ```puppet
 include libreoffice
 
-## default language is 'de'
+## Or install a particular version
+class {'libreoffice':
+  version => '4.1.5'
+}
+
+## default language is 'en-GB'
 include libreoffice::languagepack
 
 ## or set your own locale
 class { 'libreoffice::languagepack':
-  locale => 'de'
+  locale => 'en-GB'
 }
 ```
 
